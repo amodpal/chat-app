@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap');
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+ }
+ 
+ :root
+ {
+    --light-blue:#2791cf;
+    --light-gray:#7E878c;
+    --dark-gray:#3f3f3f;
+    --white:#fff;
+    --font-heading:"Baloo 2", sans-serif;
+    -fsize:16px;
+    --font-tetx: "Poppins", sans-serif;
+ }
+ main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+ }
+ header
+ {
+    background-color: var(--light-blue);
+    color: var(--white);
+    padding: 7px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ header .title
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+header .title h1 
+{
+    
+    font-family: var(--font-heading);
+    font-size: 32px;
+    margin-left: 10px;
+}
+header button
+{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: large;
+    display: none;
+}
+
+.container
+{
+    background-color: var(--light-gray);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:stretch;
+}
+.users-window
+{
+    width: 350px;
+    color: var(--white);
+    background-color: var(--dark-gray);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.users-window .users-head
+{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.users-window .users-head h4
+{
+    background-color: var(--light-gray);
+    padding: 0 8px;
+    border-radius: 50px;
+}
+.users-list p
+{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+.chat-window
+{
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--dark-gray);
+}
+.chats
+{
+    height: 65vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+.user-join
+{
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    background: var(--white);
+    border-radius: 50px;
+    width: max-content;
+    padding: 7px 20px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.message
+{
+    color: var(--dark-gray);
+    background-color: var(--white);
+    padding: 5px 15px;
+    max-width: 350px;
+    margin-bottom: 15px;
+    border-radius: 10px 50px 50px 10px;
+}
+.message p
+{
+    font-size: var(--font-tetx);
+}
+.outgoing
+{
+    margin-left: auto;
+    color: var(--white);
+    background-color: var(--light-blue);
+    border-radius: 50px 10px 10px 50px;
+    text-align: right;
+}
+
+.user-input
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:stretch;
+    padding: 20px;
+}
+.user-input input
+{
+    font-size: var(--font-heading);
+    background-color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.user-input button
+{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    background-color: var(--light-blue);
+    border-radius: 0px 50px 50px 0px;
+}
+
+@media screen and (max-width: 900px) {
+    
+    main 
+    {
+        width: 95%;
+    }
+    main header button 
+    {
+        display: block;
+    }
+    .container .users-window
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        height: max-content;
+        z-index: 11;
+        box-shadow: 0 15px 20px -20px black;
+        padding-bottom: 0;
+        display: none;
+    }
+    .container
+    {
+        position: relative;
+    }
+    .chat-window .chats .message
+    {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .container
+    {
+        position: relative;
+    }
+    .chat-window .chats .message
+    {
+        max-width: max-content;
+    }
+    
+}

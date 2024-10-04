@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="2.png" width="35px">
+                <h1>Ap chat</h1>
+            </div>
+            <button type="button" onclick="show_hide()">
+             
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+<div class="users-head">
+    <h3> live People</h3>
+    <h4 class="users-count">0</h4>
+</div>
+<div class="users-list">
+
+</div>
+            </div>
+
+            <div class="chat-window">
+
+<div class="chats">
+
+</div>
+          <div class="user-input">
+            <input id="user-msg"  type="text" placeholder="type message">
+            <button id="user-send" type="button">Send</button>
+            
+          </div> 
+          <!--<div class="de"><p>Devloped by ap computer classes</p></div>-->
+</div>
+        </div>
+    </main>
+
+    <script>
+        var uwindow=document.querySelector(".users-window");
+        function show_hide(){
+            if(uwindow.style.display=="none"){
+                uwindow.style.display="block";
+            }
+            else
+            {
+                uwindow.style.display="none";
+            }
+        }
+    </script>
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="/js/client.js"></script>
+</body>
+</html>
